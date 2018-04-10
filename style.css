@@ -20,11 +20,17 @@ header {
 
 header ul {
   list-style-type: none;
+  justify-self: end;
+}
+
+header li {
+  float: left;
 }
 
 header li a {
   display: inline;
-  text-align: right;
+   /* not necessary because they are a's */
+  /* text-decoration: underline; */
   margin-left: 25px;
   color: seashell;
 }
@@ -32,29 +38,24 @@ header li a {
 
 header #logo {
   height: 50px;
-  float: left;
+  justify-self: start;
 }
 
-main {
+.showcase {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 700px;
-
-  /* align-items:center; */
-}
-
-main .showcase .content {
-  text-align: center;
-  background-color: black;
-  width: 100%;
-}
-
-main .showcase {
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-mission-background.jpg");
   background-size: 1200px 700px;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+
+.showcase .content {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  position: absolute;
+  top: 50%;
 }
